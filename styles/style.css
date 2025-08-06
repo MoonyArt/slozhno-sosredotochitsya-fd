@@ -10,11 +10,13 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: darkblue;
+  background-color: var(--dark-color);
 
   padding-block: 10px;
   padding-inline: 10px;
 }
+
+/* Стили для шапки сайта */
 
 .header {
   display: grid;
@@ -112,12 +114,28 @@
 .header__intro {
   justify-self: end;
   inline-size: clamp(22.1875rem, 21.6508rem + 2.2901vw, 22.75rem);
+  font-weight: 700;
   margin-top: 30px;
 }
 
 .title-decor {
   line-height: 1.3;
-  font-weight: 700;
   color: var(--dark-color);
   background-color: var(--accent-color);
 }
+
+/* Стили для основного контентного блока */
+
+.main-content__title {
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--accent-color);
+}
+
+.card__text {
+  color: var(--text-color);
+}
+
+/* Стили для секции с картинками */
+
+/* Стили для подвала сайта */

@@ -11,8 +11,6 @@
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--dark-color);
-
-  padding-inline: 10px;
 }
 
 /* Стили для шапки сайта */
@@ -24,6 +22,7 @@
   block-size: 100vh;
   min-block-size: 668px;
   color: var(--accent-color);
+  padding-inline: 10px;
 }
 
 .decorated-zone {
@@ -34,7 +33,7 @@
   content: "";
   position: absolute;
   inset-block-start: 10px;
-  inset-inline-end: 0;
+  inset-inline-end: 10px;
   block-size: 25px;
   inline-size: 25px;
   background-color: transparent;
@@ -46,7 +45,7 @@
   content: "";
   position: absolute;
   inset-block-end: 10px;
-  inset-inline-start: 0;
+  inset-inline-start: 10px;
   block-size: 25px;
   inline-size: 25px;
   background-color: transparent;
@@ -57,7 +56,7 @@
 .decorated-zone__text {
   position: absolute;
   inset-block-start: 10px;
-  inset-inline-end: 30px;
+  inset-inline-end: 40px;
   line-height: 1.39;
   text-transform: uppercase;
 }
@@ -92,11 +91,24 @@
   padding-block: 4px;
   padding-inline: 14px;
   border: none;
+  cursor: pointer;
 }
 
-/* .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
-} */
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
 
 .title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -125,16 +137,91 @@
 
 /* Стили для основного контентного блока */
 
+.main-content {
+  display: grid;
+  gap: 50px;
+  margin-block: 40px;
+  padding-inline: 10px;
+}
+
+.main-content__section {
+  display: grid;
+  gap: 20px;
+}
+
+.main-content__pictures {
+  gap: 10px;
+}
+
 .main-content__title {
   font-size: 18px;
   line-height: 1.3;
   color: var(--accent-color);
 }
 
+.main-content__description {
+  font-weight: 700;
+}
+
+/* Стили для карточки */
+
+.card__title {
+  font-size: 18px;
+}
+
+.card__title_regular {
+  font-weight: 400;
+}
+
 .card__text {
+  line-height: 1.3;
   color: var(--text-color);
+  padding-block-start: 10px;
+}
+
+.card__link {
+  color: var(--text-color);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card__link:hover {
+  cursor: pointer;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.card__link:focus {
+  outline: none;
+}
+
+.card__link:focus-visible {
+  outline: 1px solid var(--text-color);
 }
 
 /* Стили для секции с картинками */
 
+.main-content__pictures-title {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.image {
+  block-size: 100%;
+  inline-size: cover;
+  width: 355px;
+}
+
 /* Стили для подвала сайта */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-inline: 10px;
+}
+
+.footer__text {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}

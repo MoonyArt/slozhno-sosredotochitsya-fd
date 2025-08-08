@@ -32,8 +32,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  inset-block-start: 10px;
-  inset-inline-end: 10px;
+  inset-block-start: var(--page-padding);
+  inset-inline-end: var(--page-padding);
   block-size: 25px;
   inline-size: 25px;
   background-color: transparent;
@@ -44,8 +44,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  inset-block-end: 10px;
-  inset-inline-start: 10px;
+  inset-block-end: var(--page-padding);
+  inset-inline-start: var(--page-padding);
   block-size: 25px;
   inline-size: 25px;
   background-color: transparent;
@@ -55,8 +55,8 @@
 
 .decorated-zone__text {
   position: absolute;
-  inset-block-start: 10px;
-  inset-inline-end: 40px;
+  inset-block-start: var(--page-padding);
+  inset-inline-end: calc(30px + var(--page-padding));
   line-height: 1.39;
   text-transform: uppercase;
 }
@@ -224,4 +224,38 @@
 
 .footer__text {
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+/* Стили для планшетной версии */
+
+@media (width >= 768px) {
+  :root {
+    --page-padding: 20px;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    margin-inline-start: -20px;
+  }
+
+  .header__intro {
+    inline-size: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);
+  }
+}
+
+/* Стили для десктопной версии */
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    padding-block-start: var(--page-padding);
+  }
 }

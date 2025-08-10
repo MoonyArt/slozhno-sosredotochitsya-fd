@@ -151,11 +151,6 @@
   gap: var(--elements-gap);
 }
 
-.main-content__gallery {
-  display: grid;
-  gap: var(--gallery-gap);
-}
-
 .main-content__title {
   font-size: var(--basic-text-size);
   line-height: 1.3;
@@ -167,8 +162,9 @@
   gap: var(--elements-gap);
 }
 
-.main-content__description {
+.main-content__subtitle {
   font-weight: 700;
+  font-size: var(--basic-text-size);
 }
 
 /* Стили для карточки */
@@ -208,12 +204,23 @@
 
 /* Стили для галереи */
 
-.main-content__gallery-title {
+.gallery {
+  display: grid;
+  gap: var(--gallery-gap);
+}
+
+.gallery__title {
   font-size: var(--basic-text-size);
   line-height: 1.3;
 }
 
-.image {
+.gallery__list {
+  display: grid;
+  gap: var(--gallery-gap);
+}
+
+.gallery__image {
+  display: block;
   block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
@@ -269,10 +276,6 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  .main-content__gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .main-content__wrapper {
     grid-column: 2 / -1;
   }
@@ -281,26 +284,25 @@
     grid-column: 1 / -1;
   }
 
-  .main-content__gallery-title {
-    grid-column: 1 / -1;
+  .gallery__list {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .image__sunset {
-    grid-column: 1 / 3;
+  .gallery__item-sunset {
+    grid-column: 1 / span 2;
   }
 
-  .image__ice-cream {
-    grid-column: 3 / auto;
-    grid-row: 2 / 4;
+  .gallery__item-ice-cream {
+    grid-column: 3 / -1;
+    grid-row: 1 / span 2;
   }
 
-  .image__tape {
-    grid-column: 1 / auto;
-    grid-row: 3 / 5;
+  .gallery__item-tape {
+    grid-row: 2 / span 2;
   }
 
-  .image__street {
-    grid-column: 2 / 4;
+  .gallery__item-street {
+    grid-column: 2 / -1;
   }
 }
 

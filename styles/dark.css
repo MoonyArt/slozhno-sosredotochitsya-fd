@@ -39,5 +39,3 @@
 .theme-dark .main-content__title {
   color: var(--accent-color);
 }
-
-@media (prefers-color-scheme: dark) {}

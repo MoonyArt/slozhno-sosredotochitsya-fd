@@ -18,24 +18,6 @@
   --button-hover-color: rgba(255, 0, 112, 0.4);
 }
 
-.theme-dark .decorated-zone::before,
-.theme-dark .decorated-zone::after {
-  border-color: var(--accent-color);
-}
-
 .theme-dark .decorated-zone__text {
   display: block;
-}
-
-.theme-dark .header__theme-menu-button {
-  color: var(--accent-color);
-}
-
-.theme-dark .title-decor {
-  color: var(--bg-color);
-  background-color: var(--accent-color);
-}
-
-.theme-dark .main-content__title {
-  color: var(--accent-color);
 }
